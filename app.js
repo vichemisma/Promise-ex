@@ -1,9 +1,12 @@
-import React from 'react'
+let check = true;
 
-const app = () => {
-  return (
-    <div>app</div>
-  )
-}
+const promise1 = new Promise((resolve, reject) => {
+  if (check){
+    resolve("Promise basarili");
+  }else {
+    reject("Promise basarisiz...");
+  }
+});
+  
 
-export default app
+console.log(promise1)
