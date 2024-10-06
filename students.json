@@ -2,21 +2,21 @@
     {
         "id": 1,
         "name": "Ahmet",
-        "grade": 60
+        "lastname": "Ozcelik"
     },
     {
         "id": 2,
         "name": "Mehmet",
-        "grade": 80
+        "lastname": "Aslan"
     },
     {
         "id": 3,
         "name": "Ali",
-        "grade": 40
+        "lastname": "Bayir"
     },
     {
         "id": 4,
         "name": "Osman",
-        "grade": 90
+        "lastname": "Aydogan"
     }
 ]
