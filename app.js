@@ -98,14 +98,35 @@ function getCommentsByUserId(url){
   })
 
 }
-getUsers("https://jsonplaceholder.typicode.com/users/3")
-.then((data) => {
-  console.log(data);
-  return getCommentsByUserId(`https://jsonplaceholder.typicode.com/comments/${data.id}`)
+// getUsers("https://jsonplaceholder.typicode.com/users/3")
+// .then((data) => {
+//   //data.forEach((user) => {console.log(user.name)})
+    
+  
+//   //console.log("Daha sonra farkli asenkron kodlarini calisitirabiliriz")//by kod yukaridaki "function getUsers" icin yazildi
+//   console.log(data);
+//   return getCommentsByUserId(`https://jsonplaceholder.typicode.com/comments/${data.id}`)
+// })
+// .then((res) => {console.log(res)})
+
+// .catch((err) => {
+//   console.log(err);
+// })
+
+const p1 = Promise.resolve("birinci promise calisti");
+const p2 = Promise.resolve("ikinci promise calisti");
+const p3 = new Promise((resolve, reject) => {
+  resolve("ucuncu promise calisti");
 })
-.then((res) => {
-  console.log(res);
-})
-.catch((err) => {
-  console.log(err);
-})
+const p4= Promise.reject("Hata yapma reyis");
+
+Promise.all([p1, p2, p3,p4])
+  .then((res) => {
+    //console.log(res)
+  for(let value of res){
+    console.log(value)
+  }
+  })
+  .catch((err) => {
+    console.log(err);
+  })
